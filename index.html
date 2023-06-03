@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Assignment JS</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -135,7 +135,7 @@
     4tr => 4000000 => 4e+6 -->
     <div class="container">
       <h1>Bài 3: Tính thuế thu nhập cá nhân</h1>
-      <div class="d-flex gap-5 ">
+      <div class="d-flex gap-5">
         <div class="mb-3">
           <input
             type="text"
@@ -178,9 +178,9 @@
     <!-- Bài 4:Tính tiền cấp -->
     <div class="container">
       <h1>Bài 4: Tính tiền cấp</h1>
-      <div class="d-flex gap-5 align-items-center">
+      <div class="d-flex gap-5 align-items-center flex-wrap">
         <div class="mb-3">
-          <select id="khachhang">
+          <select id="khachhang" onchange="HideConnect()">
             <option value="nhadan">Nhà dân</option>
             <option value="doanhnghiep">Doanh nghiệp</option>
           </select>
@@ -205,6 +205,16 @@
             placeholder="Số kênh cao cấp"
           />
         </div>
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          name=""
+          id="soKN"
+          aria-describedby="helpId"
+          placeholder="Số kết nối"
+        />
       </div>
       <button class="btn btn-success bg-opacity-75" id="tinhTiencap">
         Tính tiền cấp

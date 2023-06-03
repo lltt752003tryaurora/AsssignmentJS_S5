@@ -146,5 +146,54 @@ document.getElementById("tinhThue").onclick = function () {
   });
   document.getElementById("xuatThue").innerHTML = `
   Họ tên: ${hoten}. Tiền thuế thu nhập cá nhân: ${ketQua};
-  `
+  `;
+};
+
+//Bài tập 4:
+
+document.getElementById("soKN").style.display = "none";
+function HideConnect() {
+  var loaiKH = document.getElementById("khachhang").value;
+  if (loaiKH == "nhadan") {
+    document.getElementById("soKN").style.display = "none";
+  }
+  if (loaiKH == "doanhnghiep") {
+    document.getElementById("soKN").style.display = "block";
+  }
+}
+
+function PhiDichVuCoBan_DoanhNghiep(soKN) {
+  var phi = 0;
+  if (soKN <= 10) phi = 75;
+  else phi = 75 + (soKN - 10) * 5;
+  return phi;
+}
+
+function TinhTienCap(loaiKH, kenhcc, soKN) {
+  var tiencap = 0;
+  if (loaiKH == "nhadan") {
+    tiencap = 4.5 + 20.5 + 7.5 * kenhcc;
+  }
+  if ((loaiKH == "doanhnghiep")) {
+    tiencap = 15 + PhiDichVuCoBan_DoanhNghiep(soKN) + 50 * kenhcc;
+  }
+  return tiencap;
+}
+
+document.getElementById("tinhTiencap").onclick = function () {
+  var loaiKH = document.getElementById("khachhang").value;
+  var maKH = document.getElementById("maKH").value;
+  var kcc = document.getElementById("soKenh").value * 1;
+  console.log(kcc);
+  var soKN = document.getElementById("soKN").value * 1;
+  console.log(loaiKH);
+  var tienCap = TinhTienCap(loaiKH, kcc, soKN);
+  console.log(tienCap);
+  var tienCapEdit = tienCap.toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
+  document.getElementById("xuatTienCap").innerHTML = `
+    Mã khách hàng là: ${maKH}. Tiền cấp: ${tienCapEdit}
+  `;
 };
