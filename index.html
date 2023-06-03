@@ -135,7 +135,7 @@
     4tr => 4000000 => 4e+6 -->
     <div class="container">
       <h1>Bài 3: Tính thuế thu nhập cá nhân</h1>
-      <div class="d-flex gap-5">
+      <div class="d-flex gap-5 ">
         <div class="mb-3">
           <input
             type="text"
@@ -153,7 +153,7 @@
             name=""
             id="thuNhapNam"
             aria-describedby="helpId"
-            placeholder="Tổng thu nhập năm"
+            placeholder="Tổng thu nhập năm (triệu)"
           />
         </div>
         <div class="mb-3">
@@ -168,52 +168,51 @@
         </div>
       </div>
       <button class="btn btn-success bg-opacity-75" id="tinhThue">
-        Tính tiền điện
+        Tính tiền thuế
       </button>
       <div
         class="bg-primary bg-opacity-75 text-white p-3 rounded-3 mt-3 mb-5"
         id="xuatThue"
       ></div>
-
-      <!-- Bài 4:Tính tiền cấp -->
-      <div class="container">
-        <h1>Bài 4: Tính tiền cấp</h1>
-        <div class="d-flex gap-5">
-          <div class="mb-3">
-            <h6 class="mt-2">Đối tượng</h6>
-            <select id="khachhang">
-              <option value="nhadan">Nhà dân</option>
-              <option value="doanhnghiep">Doanh nghiệp</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <input
-              type="text"
-              class="form-control"
-              name=""
-              id="maKH"
-              aria-describedby="helpId"
-              placeholder="Nhập mã khách hàng"
-            />
-          </div>
-          <div class="mb-3">
-            <input
-              type="number"
-              class="form-control"
-              name=""
-              id="soKenh"
-              aria-describedby="helpId"
-              placeholder="Số kênh cao cấp"
-            />
-          </div>
+    </div>
+    <!-- Bài 4:Tính tiền cấp -->
+    <div class="container">
+      <h1>Bài 4: Tính tiền cấp</h1>
+      <div class="d-flex gap-5 align-items-center">
+        <div class="mb-3">
+          <select id="khachhang">
+            <option value="nhadan">Nhà dân</option>
+            <option value="doanhnghiep">Doanh nghiệp</option>
+          </select>
         </div>
-        <button class="btn btn-success bg-opacity-75" id="tinhTiencap">
-          Tính tiền cấp
-        </button>
-        <div
-          class="bg-primary bg-opacity-75 text-white p-3 rounded-3 mt-3 mb-5"
-          id="xuatTienCap"
-        ></div>
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control"
+            name=""
+            id="maKH"
+            aria-describedby="helpId"
+            placeholder="Nhập mã khách hàng"
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            type="number"
+            class="form-control"
+            name=""
+            id="soKenh"
+            aria-describedby="helpId"
+            placeholder="Số kênh cao cấp"
+          />
+        </div>
+      </div>
+      <button class="btn btn-success bg-opacity-75" id="tinhTiencap">
+        Tính tiền cấp
+      </button>
+      <div
+        class="bg-primary bg-opacity-75 text-white p-3 rounded-3 mt-3 mb-5"
+        id="xuatTienCap"
+      ></div>
     </div>
 
     <!-- Bootstrap JavaScript Libraries -->
